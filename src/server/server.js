@@ -3,6 +3,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import { connectDB } from './connect-db';
 import { connect } from 'mongodb';
+import './initialize-db';
 
 let port = 7777;
 let app = express();
