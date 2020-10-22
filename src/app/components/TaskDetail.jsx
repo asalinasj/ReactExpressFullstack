@@ -35,6 +35,8 @@ const TaskDetail = ({ id, comments, task, isComplete, groups, setTaskCompletion,
 const mapStateToProps = (state, props) => {
     let id = props.match.params.id;
     let task = state.tasks.find(task=>task.id === id);
+    console.log(task);
+    console.log(task.isComplete);
     let groups = state.groups;
     return {
         id,

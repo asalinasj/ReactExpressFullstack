@@ -8,6 +8,7 @@ export const PROCESSING_AUTHENTICATE_USER = `PROCESSING_AUTHENTICATE_USER`;
 export const AUTHENTICATING = `AUTHENTICATING`;
 export const AUTHENTICATED = `AUTHENTICATED`;
 export const NOT_AUTHENTICATED = `NOT AUTHENTICATED`;
+export const SET_STATE = `SET_STATE`;
 
 export const requestTaskCreation = (groupID) => {
     return {
@@ -64,3 +65,11 @@ export const processAuthenticateUser = (status = AUTHENTICATING, session = null)
         authenticated: status
     }
 }
+
+export const setState = (state) => {
+    return {
+        type:SET_STATE,
+        state
+    }
+}
+
